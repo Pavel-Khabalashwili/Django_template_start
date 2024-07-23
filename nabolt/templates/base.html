@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+
+    <html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {% block title %}
+                Title
+            {% endblock title %}
+        </title>
+
+        <!-- ПОДКЛЮЧЕНИЕ FAVICON -->
+
+        <!-- Cтили -->
+
+        {% block styles %}
+            Style
+        {% endblock styles %}
+
+        <!-- Мои скрипты -->
+        {% comment %} <script src="{% static '' %}" defer></script> {% endcomment %}
+        {% block scripts %}
+            Script
+        {% endblock scripts %}
+    </head>
+
+    <body class="page">
+
+        <!-- Шапка -->
+        <header class="header">
+            Паралельно используется базовый шаблон
+        </header>
+
+        <main class="main">
+            {% block main %}
+                Main
+            {% endblock main %}
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+        </footer>
+    </body>
+
+</html>
